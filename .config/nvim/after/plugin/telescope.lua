@@ -4,8 +4,8 @@ require('telescope').setup{
   }
 }
 
-local map = vim.api.nvim_set_keymap
-map("n", "<leader>ff", ":Telescope find_files<cr>", {})
-map("n", "<leader>ft", ":Telescope live_grep<cr>", {})
-map("n", "<leader>fb", ":Telescope buffers<cr>", {})
-map("n", "<leader>fc", ":Telescope git_commits<cr>", {})
+local ts = require('telescope.builtin')
+vim.keymap.set("n", "<leader>ff", ts.find_files, {})
+vim.keymap.set("n", "<leader>ft", ts.live_grep, {})
+vim.keymap.set("n", "<leader>fb", ts.buffers, {})
+vim.keymap.set("n", "<leader>fc", ts.git_commits, {})
