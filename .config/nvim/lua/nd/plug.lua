@@ -13,8 +13,10 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug ('prettier/vim-prettier', { run = 'yarn install --frozen-lockfile --production' })
 
+Plug ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
 Plug 'windwp/nvim-autopairs'
 Plug 'ggandor/leap.nvim'
+Plug 'mbbill/undotree'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug ('nvim-telescope/telescope.nvim', { tag = '0.1.0' })
