@@ -5,7 +5,6 @@ require('telescope').setup{
 }
 
 local ts = require('telescope.builtin')
-vim.keymap.set("n", "<leader>ff", ts.find_files)
-vim.keymap.set("n", "<leader>ft", ts.live_grep)
-vim.keymap.set("n", "<leader>fb", ts.buffers)
-vim.keymap.set("n", "<leader>fc", ts.git_commits)
+vim.keymap.set("n", "<leader>f", ts.find_files)
+vim.keymap.set("n", "<leader>s", ts.live_grep)
+vim.keymap.set("n", "<leader>b", ts.buffers)
