@@ -3,6 +3,8 @@ vim.call('plug#begin')
 
 -- theming
 Plug 'folke/tokyonight.nvim'
+Plug "olimorris/onedarkpro.nvim"
+Plug ('projekt0n/github-nvim-theme', { tag = '0.0.7' })
 
 -- lsp & completion
 Plug 'neovim/nvim-lspconfig'
