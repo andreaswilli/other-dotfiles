@@ -17,6 +17,7 @@ Plug ('prettier/vim-prettier', { run = 'yarn install --frozen-lockfile --product
 
 Plug ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
 Plug 'windwp/nvim-autopairs'
+Plug 'numToStr/Comment.nvim'
 Plug 'ggandor/leap.nvim'
 Plug 'mbbill/undotree'
 
