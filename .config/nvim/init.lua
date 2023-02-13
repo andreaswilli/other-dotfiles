@@ -1,7 +1,10 @@
 require('nd.set')
 require('nd.map')
 require('nd.plug')
-require('nd.theme')
+
+
+-- vim.cmd[[colorscheme tokyonight]]
+require('github-theme').setup()
 
 -- format on save
 -- TODO: look into null-ls

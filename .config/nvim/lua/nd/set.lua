@@ -5,7 +5,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.opt.showmode = false
-vim.opt.signcolumn = 'no'
+vim.opt.signcolumn = 'yes'
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2

@@ -20,6 +20,7 @@ Plug 'windwp/nvim-autopairs'
 Plug 'numToStr/Comment.nvim'
 Plug 'ggandor/leap.nvim'
 Plug 'mbbill/undotree'
+Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug ('nvim-telescope/telescope.nvim', { tag = '0.1.0' })
