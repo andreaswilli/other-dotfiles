@@ -27,4 +27,7 @@ Plug ('nvim-telescope/telescope.nvim', { tag = '0.1.0' })
 
 Plug 'itchyny/lightline.vim'
 
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
+
 vim.call('plug#end')
