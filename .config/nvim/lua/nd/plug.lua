@@ -30,4 +30,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
 
+Plug 'mattn/emmet-vim'
+
 vim.call('plug#end')
