@@ -27,5 +27,11 @@ vim.cmd('cabbrev help vert help')
 vim.keymap.set('i', '<S-Tab>', '<C-d>')
 
 vim.keymap.set('n', 'gh', function () vim.cmd(vim.fn.empty(vim.fn.filter(vim.fn.getwininfo(), 'v:val.quickfix')) == 1 and 'cope' or 'ccl') end)
-vim.keymap.set('n', 'gj', function () vim.cmd('cn') end)
-vim.keymap.set('n', 'gk', function () vim.cmd('cp') end)
+vim.keymap.set('n', 'gj', function ()
+  success, err = pcall(vim.cmd, 'cn')
+  if (not success) then print(err) end
+end)
+vim.keymap.set('n', 'gk', function ()
+  success, err = pcall(vim.cmd, 'cp')
+  if (not success) then print(err) end
+end)
