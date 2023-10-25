@@ -25,3 +25,7 @@ vim.cmd('cabbrev help vert help')
 
 -- this is actually overruled by the luasnip config, only left here as a reminder
 vim.keymap.set('i', '<S-Tab>', '<C-d>')
+
+vim.keymap.set('n', 'gh', function () vim.cmd(vim.fn.empty(vim.fn.filter(vim.fn.getwininfo(), 'v:val.quickfix')) == 1 and 'cope' or 'ccl') end)
+vim.keymap.set('n', 'gj', function () vim.cmd('cn') end)
+vim.keymap.set('n', 'gk', function () vim.cmd('cp') end)
