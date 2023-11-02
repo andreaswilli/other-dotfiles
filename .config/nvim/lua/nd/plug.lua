@@ -4,7 +4,7 @@ vim.call('plug#begin')
 -- theming
 Plug 'folke/tokyonight.nvim'
 Plug "olimorris/onedarkpro.nvim"
-Plug ('projekt0n/github-nvim-theme', { tag = '0.0.7' })
+Plug ('projekt0n/github-nvim-theme', { tag = 'v0.0.7' })
 
 Plug ('prettier/vim-prettier', { run = 'yarn install --frozen-lockfile --production' })
 
@@ -34,7 +34,7 @@ Plug 'mbbill/undotree'
 Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'nvim-lua/plenary.nvim'
-Plug ('nvim-telescope/telescope.nvim', { tag = '0.1.0' })
+Plug ('nvim-telescope/telescope.nvim', { branch = '0.1.x' })
 
 Plug 'itchyny/lightline.vim'
 
