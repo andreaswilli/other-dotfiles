@@ -20,3 +20,17 @@ vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename, bufopts)
 vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action, bufopts)
 vim.keymap.set('n', '<leader>lf', function() vim.lsp.buf.format { async=true } end, bufopts)
 
+require('lspconfig').eslint.setup {
+  filetypes = {
+    "javascript",
+    "javascriptreact",
+    "javascript.jsx",
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx",
+    "vue",
+    "svelte",
+    "astro",
+    "html" -- add html to default config
+  }
+}
