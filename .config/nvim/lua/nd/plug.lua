@@ -31,6 +31,9 @@ Plug 'windwp/nvim-autopairs'
 Plug 'numToStr/Comment.nvim'
 Plug 'ggandor/leap.nvim'
 Plug 'mbbill/undotree'
+
+-- Git
+Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'nvim-lua/plenary.nvim'
