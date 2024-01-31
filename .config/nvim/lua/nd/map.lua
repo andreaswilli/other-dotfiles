@@ -20,8 +20,8 @@ vim.keymap.set('v', '<leader>d', '"_d')
 vim.keymap.set('n', '<leader>c', '"_c')
 vim.keymap.set('v', '<leader>c', '"_c')
 
-vim.cmd('cabbrev h vert h')
-vim.cmd('cabbrev help vert help')
+vim.cmd('command -nargs=* H tab h <args>')
+vim.cmd('command -nargs=* Help tab h <args>')
 
 -- this is actually overruled by the luasnip config, only left here as a reminder
 vim.keymap.set('i', '<S-Tab>', '<C-d>')
