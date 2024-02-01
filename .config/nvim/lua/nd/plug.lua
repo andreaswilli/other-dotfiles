@@ -3,7 +3,7 @@ vim.call('plug#begin')
 
 -- theming
 Plug 'folke/tokyonight.nvim'
-Plug "olimorris/onedarkpro.nvim"
+-- Plug "olimorris/onedarkpro.nvim"
 Plug ('projekt0n/github-nvim-theme', { tag = 'v0.0.7' })
 
 Plug ('prettier/vim-prettier', { run = 'yarn install --frozen-lockfile --production' })
