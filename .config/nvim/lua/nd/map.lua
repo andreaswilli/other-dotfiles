@@ -18,7 +18,7 @@ vim.keymap.set({'n', 'v'}, '<leader>d', '"_d')
 vim.keymap.set({'n', 'v'}, '<leader>c', '"_c')
 
 vim.keymap.set('v', '<C-c>', '"+y')
-vim.keymap.set({'n', 'v'}, '<C-v>', '"+p')
+vim.keymap.set({'n', 'v'}, '<C-v>', '"+p`]')
 vim.keymap.set('i', '<C-v>', '<esc>"+p`]a')
 
 vim.cmd('command -nargs=* H tab h <args>')
