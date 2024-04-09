@@ -2,9 +2,10 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 
 -- theming
-Plug 'folke/tokyonight.nvim'
+-- Plug 'folke/tokyonight.nvim'
 -- Plug "olimorris/onedarkpro.nvim"
-Plug ('projekt0n/github-nvim-theme', { tag = 'v0.0.7' })
+-- Plug ('projekt0n/github-nvim-theme', { tag = 'v0.0.7' })
+Plug ('catppuccin/nvim', { as = 'catppuccin' })
 
 Plug ('prettier/vim-prettier', { run = 'yarn install --frozen-lockfile --production' })
 
