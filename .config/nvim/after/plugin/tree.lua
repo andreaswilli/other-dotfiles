@@ -10,6 +10,9 @@ require("nvim-tree").setup({
       quit_on_open = true,
     },
   },
+  git = {
+    enable = false,
+  }
 })
 
 local tree = require("nvim-tree.api").tree
