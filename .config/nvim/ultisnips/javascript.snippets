@@ -1,0 +1,45 @@
+snippet log "debug log expression and value"
+console.log("<debug log> $1:", ${1:});
+endsnippet
+
+snippet ife "if [else [if]] statement"
+if (${1:true}) {
+	${2:// TODO: implement}
+}${3: else${4: if (${5:true})} {
+	${6:// TODO: implement}
+}}
+endsnippet
+
+snippet fori "for loop with incrementing index"
+for (let i = ${1:0}; i < ${2:10}; i++) {
+	${3:// TODO: implement}
+}
+endsnippet
+
+snippet forof "for of loop"
+for (const ${1:item} of ${2:iterable}) {
+	${3:// TODO: implement}
+}
+endsnippet
+
+snippet fn "function"
+function ${1:name} (${2:args}) {
+	${3:// TODO: implement}
+}
+endsnippet
+
+snippet afn "arrow function"
+(${1:args}) => {$2}
+endsnippet
+
+snippet "([\S]+)\.f" "array filter" r
+`!p snip.rv = match.group(1)`.filter((${1:args}) => {$2})
+endsnippet
+
+snippet "([\S]+)\.m" "array map" r
+`!p snip.rv = match.group(1)`.map((${1:args}) => {$2})
+endsnippet
+
+snippet "([\S]+)\.r" "array reduce" r
+`!p snip.rv = match.group(1)`.reduce((${1:acc}, ${2:cur}) => {$3}, ${4:init})
+endsnippet

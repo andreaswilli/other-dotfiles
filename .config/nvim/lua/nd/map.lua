@@ -24,9 +24,6 @@ vim.keymap.set('i', '<C-v>', '<esc>"+p`]a')
 vim.cmd('command -nargs=* H tab h <args>')
 vim.cmd('command -nargs=* Help tab h <args>')
 
--- this is actually overruled by the luasnip config, only left here as a reminder
-vim.keymap.set('i', '<S-Tab>', '<C-d>')
-
 vim.keymap.set('n', 'gh', function () vim.cmd(vim.fn.empty(vim.fn.filter(vim.fn.getwininfo(), 'v:val.quickfix')) == 1 and 'cope' or 'ccl') end)
 vim.keymap.set('n', 'gj', function ()
   success, err = pcall(vim.cmd, 'cn')
@@ -38,3 +35,4 @@ vim.keymap.set('n', 'gk', function ()
 end)
 
 vim.keymap.set('n', '<leader>t', 'gcATODO: ', {remap = true})
+vim.keymap.set('n', '<leader>d', ':g/<debug log>/d')

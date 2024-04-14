@@ -20,12 +20,10 @@ Plug 'hrsh7th/nvim-cmp'         -- Required
 Plug 'hrsh7th/cmp-nvim-lsp'     -- Required
 Plug 'hrsh7th/cmp-buffer'       -- Optional
 Plug 'hrsh7th/cmp-path'         -- Optional
-Plug 'saadparwaiz1/cmp_luasnip' -- Optional
 Plug 'hrsh7th/cmp-nvim-lua'     -- Optional
 
 --  Snippets
-Plug 'L3MON4D3/LuaSnip'             -- Required
-Plug 'rafamadriz/friendly-snippets' -- Optional
+Plug 'SirVer/ultisnips'
 
 Plug ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
 Plug 'windwp/nvim-autopairs'
