@@ -36,3 +36,5 @@ vim.keymap.set('n', 'gk', function ()
   success, err = pcall(vim.cmd, 'cp')
   if (not success) then print(err) end
 end)
+
+vim.keymap.set('n', '<leader>t', 'gcATODO: ', {remap = true})

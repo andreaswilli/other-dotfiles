@@ -47,6 +47,9 @@ Plug 'nvim-tree/nvim-tree.lua'
 
 Plug 'mattn/emmet-vim'
 
+Plug 'folke/todo-comments.nvim'
+Plug 'brenoprata10/nvim-highlight-colors'
+
 Plug 'lervag/vimtex'
 
 Plug 'folke/neodev.nvim'
