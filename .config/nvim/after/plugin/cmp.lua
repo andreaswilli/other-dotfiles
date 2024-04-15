@@ -5,17 +5,22 @@ local cmp_config = lsp.defaults.cmp_config({
   window = {
     completion = cmp.config.window.bordered()
   },
+  snippet = {
+    expand = function(args)
+      vim.fn["UltiSnips#Anon"](args.body)
+    end,
+  },
   mapping = cmp.mapping.preset.insert({
-      ['<C-Space>'] = cmp.mapping.complete(),
-      ["<C-e>"] = function ()
-        if cmp.visible() then
-          cmp.abort()
-        else
-          cmp.complete()
-        end
-      end,
-      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-    }),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ["<C-e>"] = function()
+      if cmp.visible() then
+        cmp.abort()
+      else
+        cmp.complete()
+      end
+    end,
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),   -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+  }),
 })
 
 cmp_config.mapping['<Tab>'] = cmp.config.disable
@@ -27,11 +32,10 @@ cmp.setup(cmp_config)
 cmp.setup.cmdline({ '/', '?' }, {
   mapping = cmp.mapping.preset.cmdline(),
   completion = {
-    completeopt='menu,menuone,noselect'
+    completeopt = 'menu,menuone,noselect'
   },
   preselect = cmp.PreselectMode.None,
   sources = {
     { name = 'buffer' }
   }
 })
-
