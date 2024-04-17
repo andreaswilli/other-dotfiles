@@ -26,6 +26,7 @@ Plug 'hrsh7th/cmp-nvim-lua'     -- Optional
 Plug 'SirVer/ultisnips'
 
 Plug ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
+Plug 'nvim-treesitter/nvim-treesitter-context'
 Plug 'windwp/nvim-autopairs'
 Plug 'numToStr/Comment.nvim'
 Plug 'ggandor/leap.nvim'
