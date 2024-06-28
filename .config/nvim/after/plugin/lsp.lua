@@ -34,3 +34,9 @@ require('lspconfig').eslint.setup {
     "html" -- add html to default config
   }
 }
+
+require('lspconfig').angularls.setup {
+  on_attach = function ()
+    vim.cmd[[compiler angular]]
+  end
+}
