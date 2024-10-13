@@ -49,5 +49,5 @@ vim.keymap.set('n', 'gk', function()
   end
 end)
 
-vim.keymap.set('n', '<leader>t', 'gcATODO: ', { remap = true })
+-- vim.keymap.set('n', '<leader>t', 'gcATODO: ', { remap = true })
 vim.keymap.set('n', '<leader>d', ':g/<debug log>/d')
