@@ -18,9 +18,9 @@ return {
         quit_on_open = true,
       }
     },
-    -- git = {
-    --   enable = false,
-    -- },
+    git = {
+      enable = false,
+    },
   },
 
   keys = {
