@@ -14,7 +14,7 @@ return {
               ['<esc>'] = actions.close,
             },
           },
-          file_ignore_patterns = { '.git/', 'node_modules' },
+          file_ignore_patterns = { '.git/', '.git\\', 'node_modules' },
           path_display = { 'truncate' },
           layout_config = {
             prompt_position = 'top',
