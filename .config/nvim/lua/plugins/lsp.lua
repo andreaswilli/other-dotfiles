@@ -53,7 +53,10 @@ return {
       { '<leader>lr', vim.lsp.buf.rename },
       { '<leader>la', vim.lsp.buf.code_action, mode = { 'n', 'v' } },
       { '<leader>lf', function()
-        vim.lsp.buf.format { async = true }
+        vim.lsp.buf.format {
+          async = true,
+          filter = function(client) return client.name ~= "ts_ls" end
+        }
       end },
     },
   },

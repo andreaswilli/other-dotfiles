@@ -1,41 +1,43 @@
-local actions = require('telescope.actions')
-
 return {
   {
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' },
 
-    opts = {
-      defaults = {
-        mappings = {
-          i = {
-            ['<esc>'] = actions.close,
-          },
-        },
-        file_ignore_patterns = { '.git/', 'node_modules' },
-        path_display = { 'truncate' },
-        layout_config = {
-          prompt_position = 'top',
-        },
-        sorting_strategy = 'ascending',
-      },
-      pickers = {
-        buffers = {
-          sort_lastused = true,
+    opts = function()
+      local actions = require('telescope.actions')
+
+      return {
+        defaults = {
           mappings = {
             i = {
-              ['<c-x>'] = 'delete_buffer',
+              ['<esc>'] = actions.close,
+            },
+          },
+          file_ignore_patterns = { '.git/', 'node_modules' },
+          path_display = { 'truncate' },
+          layout_config = {
+            prompt_position = 'top',
+          },
+          sorting_strategy = 'ascending',
+        },
+        pickers = {
+          buffers = {
+            sort_lastused = true,
+            mappings = {
+              i = {
+                ['<c-x>'] = 'delete_buffer',
+              },
             },
           },
         },
-      },
-      extensions = {
-        ['ui-select'] = {
-          require("telescope.themes").get_cursor {}
+        extensions = {
+          ['ui-select'] = {
+            require("telescope.themes").get_cursor {}
+          },
         },
-      },
-    },
+      }
+    end,
 
     config = function(_, opts)
       require('telescope').setup(opts)
