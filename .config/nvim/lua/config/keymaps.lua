@@ -1,6 +1,7 @@
 vim.keymap.set('n', '<leader>r', ':source $MYVIMRC<cr>')
 
 vim.keymap.set('n', '<leader>h', vim.cmd.nohlsearch)
+vim.keymap.set('n', '<leader>j', function() vim.cmd('fclose') end)
 
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")

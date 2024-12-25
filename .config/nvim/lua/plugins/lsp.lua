@@ -27,7 +27,18 @@ return {
               vim.cmd [[compiler angular]]
             end,
           }
-        end
+        end,
+        ['nil_ls'] = function()
+          require('lspconfig').nil_ls.setup({
+            settings = {
+              ['nil'] = {
+                formatting = {
+                  command = { "nixfmt" },
+                },
+              },
+            },
+          })
+        end,
       }
 
       vim.diagnostic.config({
