@@ -56,6 +56,7 @@ return {
       { '<leader>S', '<cmd>Telescope grep_string<cr>' },
       { '<leader>b', '<cmd>Telescope buffers<cr>' },
       { '<leader>H', '<cmd>Telescope help_tags<cr>' },
+      { '<leader>r', '<cmd>Telescope resume<cr>' },
     },
   },
 

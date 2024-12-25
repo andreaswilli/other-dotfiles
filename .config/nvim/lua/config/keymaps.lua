@@ -1,5 +1,3 @@
-vim.keymap.set('n', '<leader>r', ':source $MYVIMRC<cr>')
-
 vim.keymap.set('n', '<leader>h', vim.cmd.nohlsearch)
 vim.keymap.set('n', '<leader>j', '<cmd>fclose<CR>')
 
