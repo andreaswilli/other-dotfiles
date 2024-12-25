@@ -66,7 +66,10 @@ return {
       { '<leader>lf', function()
         vim.lsp.buf.format {
           async = true,
-          filter = function(client) return client.name ~= "ts_ls" end
+          filter = function(client)
+            return client.name ~= 'ts_ls'
+                and client.name ~= 'angularls'
+          end
         }
       end },
     },
