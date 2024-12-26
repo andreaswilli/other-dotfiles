@@ -26,8 +26,9 @@ return {
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
       },
+      preselect = cmp.PreselectMode.None,
       completion = {
-        completeopt = 'menuone,noinsert',
+        completeopt = 'menuone,noselect,noinsert',
       },
       formatting = {
         format = lspkind.cmp_format({
