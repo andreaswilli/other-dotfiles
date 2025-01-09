@@ -52,7 +52,8 @@ return {
 
     keys = {
       { '<leader>f', '<cmd>Telescope find_files hidden=true<cr>' },
-      -- { '<leader>s', '<cmd>Telescope live_grep<cr>' }, -- replaced by multigrep
+      -- replaced by multigrep, but still needed to trigger lazy loading of telescope
+      { '<leader>s', '<cmd>Telescope live_grep<cr>' },
       { '<leader>S', '<cmd>Telescope grep_string<cr>' },
       { '<leader>b', '<cmd>Telescope buffers<cr>' },
       { '<leader>H', '<cmd>Telescope help_tags<cr>' },
