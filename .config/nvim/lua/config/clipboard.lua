@@ -1,4 +1,4 @@
-if vim.fn.has("wsl") then
+if vim.fn.has("wsl") == 1 then
 
   local clip = "/mnt/c/Windows/System32/clip.exe"
   local powershell = "/mnt/c/eplatform/mytools/PowerShell-7.3.1-win-x64/pwsh.exe"
