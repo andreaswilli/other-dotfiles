@@ -6,8 +6,8 @@ let current_compiler = "angular"
 
 set makeprg=ng\ build
 
-CompilerSet errorformat=%E%.%#[%tRROR]%m
-CompilerSet errorformat+=%E%.%#[%tARNING]%m
+CompilerSet errorformat=%E%.%#%tRROR%m
+CompilerSet errorformat+=%E%.%#%tARNING%m
 CompilerSet errorformat+=%C%f:%l:%c:
 CompilerSet errorformat+=%C%.%#
 CompilerSet errorformat+=%-G%.%#
