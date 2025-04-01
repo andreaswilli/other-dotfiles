@@ -45,9 +45,6 @@ return {
         virtual_text = false,
         float = { border = 'rounded' },
       })
-
-      vim.lsp.handlers["textDocument/hover"] =
-          vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
     end,
   },
 
@@ -60,7 +57,7 @@ return {
       { 'gr',         vim.lsp.buf.references },
       { 'gn',         vim.diagnostic.goto_next },
       { 'gp',         vim.diagnostic.goto_prev },
-      { 'K',          vim.lsp.buf.hover },
+      { 'K',          function() vim.lsp.buf.hover { border = "rounded" } end},
       { '<leader>lr', vim.lsp.buf.rename },
       { '<leader>la', vim.lsp.buf.code_action, mode = { 'n', 'v' } },
       { '<leader>lf', function()
