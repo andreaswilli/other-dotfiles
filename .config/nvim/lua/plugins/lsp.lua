@@ -39,6 +39,14 @@ return {
             },
           })
         end,
+        ['tinymist'] = function()
+          require('lspconfig').tinymist.setup {
+            settings = {
+              formatterMode = 'typstyle',
+              exportPdf = 'onType',
+            }
+          }
+        end
       }
 
       vim.diagnostic.config({

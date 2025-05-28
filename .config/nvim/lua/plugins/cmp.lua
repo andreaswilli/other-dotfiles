@@ -17,6 +17,7 @@ return {
     local lspkind = require('lspkind')
 
     cmp.setup {
+      max_width = 20,
       snippet = {
         expand = function(args)
           vim.fn["UltiSnips#Anon"](args.body)
@@ -34,6 +35,11 @@ return {
         format = lspkind.cmp_format({
           mode = 'symbol_text',
           symbol_map = { Copilot = "" },
+          maxwidth = {
+            menu = 50,       -- leading text (labelDetails)
+            abbr = 50,       -- actual suggestion item
+          },
+          ellipsis_char = '...',
         }),
       },
       mapping = cmp.mapping.preset.insert({
