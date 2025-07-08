@@ -21,6 +21,7 @@ vim.keymap.set({ 'n', 'v' }, '<C-v>', '"+p`]')
 vim.keymap.set('i', '<C-v>', '<esc>"+p`]a')
 
 vim.keymap.set('n', '<leader>a', ':%s//g<Left><Left>')
+vim.keymap.set('v', '<leader>a', ':s//g<Left><Left>')
 
 vim.cmd('command -nargs=* H tab h <args>')
 vim.cmd('command -nargs=* Help tab h <args>')
