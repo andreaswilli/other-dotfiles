@@ -18,6 +18,14 @@ return {
         end,
       })
 
+      vim.lsp.config('ts_ls', {
+        init_options = {
+          preferences = {
+            importModuleSpecifierPreference = 'relative',
+          }
+        }
+      })
+
       vim.lsp.config('tinymist', {
         settings = {
           formatterMode = 'typstyle',
