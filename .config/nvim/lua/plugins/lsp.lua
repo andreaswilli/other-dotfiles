@@ -31,7 +31,7 @@ return {
           formatterMode = 'typstyle',
           formatterProseWrap = true,
           formatterPrintWidth = 80,
-          exportPdf = 'onType',
+          exportPdf = 'onSave',
         }
       })
 
