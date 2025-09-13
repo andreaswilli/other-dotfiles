@@ -12,3 +12,19 @@ snippet ,M "block math" A
 $1
 \$
 endsnippet
+
+snippet ,ta "table" A
+#table(
+	columns: ${1:3},
+	$2
+)
+endsnippet
+
+snippet ,th "table header" Ai
+table.header($1),
+endsnippet
+
+snippet ,tc "table cell" Ai
+table.cell($1),
+endsnippet
+
