@@ -1,1 +1,15 @@
 extends javascript
+
+snippet ,de "describe() and it()" A
+describe('`!p snip.rv = fn.split('.')[0]`', () => {
+  it('should ', () => {
+    ${1:// TODO: implement}
+  });
+});
+endsnippet
+
+snippet ,it "it()" A
+it('should $1',${2: async} () => {
+  ${3:// TODO: implement}
+});
+endsnippet

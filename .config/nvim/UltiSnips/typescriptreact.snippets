@@ -10,22 +10,12 @@ const `!p snip.rv = fn.split('.')[0]` = (): ReactNode => {
 export default `!p snip.rv = fn.split('.')[0]`;
 endsnippet
 
-snippet ,pr "props" A
+snippet ,pr "props type declaration" A
 type `!p snip.rv = fn.split('.')[0]`Props = {
   ${1:// TODO: implement}
 };
 endsnippet
 
-snippet ,de "describe() and it()" A
-describe('`!p snip.rv = fn.split('.')[0]`', () => {
-  it('should ', () => {
-    ${1:// TODO: implement}
-  });
-});
-endsnippet
-
-snippet ,it "it()" A
-it('should $1',${2: async} () => {
-  ${3:// TODO: implement}
-});
+snippet ,pd "props destructuring" Ai
+{$1}: `!p snip.rv = fn.split('.')[0]`Props
 endsnippet
