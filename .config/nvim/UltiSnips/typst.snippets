@@ -1,9 +1,13 @@
-snippet ,c "code block (raw)" A
+snippet ,c "inline code" Ai
+\`$1\`
+endsnippet
+
+snippet ,C "code block (raw)" A
 \`\`\`$1
 \`\`\`
 endsnippet
 
-snippet ,m "inline math" A
+snippet ,m "inline math" Ai
 \$$1\$
 endsnippet
 
@@ -28,3 +32,10 @@ snippet ,tc "table cell" Ai
 table.cell($1),
 endsnippet
 
+snippet ,b "bold" Ai
+*$1*
+endsnippet
+
+snippet ,i "italic" Ai
+_$1_
+endsnippet
