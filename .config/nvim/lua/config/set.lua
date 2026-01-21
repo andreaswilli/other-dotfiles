@@ -17,4 +17,6 @@ vim.opt.termguicolors = true
 
 vim.opt.colorcolumn = '80'
 
+vim.opt.splitright = true
+
 vim.g.mapleader = ' '
