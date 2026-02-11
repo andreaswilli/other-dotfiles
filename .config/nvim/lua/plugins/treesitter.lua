@@ -5,7 +5,8 @@ return {
     require('nvim-treesitter.install').update({ with_sync = true })()
   end,
 
-  main = 'nvim-treesitter.configs',
+  lazy = false,
+
   opts = {
     sync_install = false,
     auto_install = true,
