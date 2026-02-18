@@ -38,7 +38,6 @@ return {
 
       vim.diagnostic.config({
         virtual_text = false,
-        float = { border = 'rounded' },
       })
     end,
   },
@@ -52,9 +51,9 @@ return {
       { 'gr',         vim.lsp.buf.references },
       { 'gn',         vim.diagnostic.goto_next },
       { 'gp',         vim.diagnostic.goto_prev },
-      { 'K',          function() vim.lsp.buf.hover { border = "rounded" } end },
+      { 'K',          vim.lsp.buf.hover },
       { '<leader>lr', vim.lsp.buf.rename },
-      { '<leader>la', vim.lsp.buf.code_action,                                mode = { 'n', 'v' } },
+      { '<leader>la', vim.lsp.buf.code_action, mode = { 'n', 'v' } },
       { '<leader>lf', function()
         vim.lsp.buf.format {
           async = true,

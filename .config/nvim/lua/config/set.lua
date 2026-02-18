@@ -19,4 +19,6 @@ vim.opt.colorcolumn = '80'
 
 vim.opt.splitright = true
 
+vim.opt.winborder = 'rounded'
+
 vim.g.mapleader = ' '
