@@ -12,7 +12,16 @@ return {
     -- explorer = { enabled = true },
     -- indent = { enabled = true },
     -- input = { enabled = true },
-    picker = { enabled = true },
+    picker = {
+      enabled = true,
+      win = {
+        input = {
+          keys = {
+            ['<Esc>'] = { 'close', mode = { 'n', 'i' } },
+          },
+        },
+      },
+    },
     -- notifier = { enabled = true },
     -- quickfile = { enabled = true },
     -- scope = { enabled = true },
@@ -22,11 +31,10 @@ return {
   },
   keys = {
     { '<leader>f', function () Snacks.picker.files() end},
-    -- replaced by multigrep, but still needed to trigger lazy loading of telescope
     { '<leader>s', function () Snacks.picker.grep() end},
-    -- { '<leader>S', '<cmd>Telescope grep_string<cr>' },
+    { '<leader>S', function () Snacks.picker.grep_word() end, mode = { 'n', 'x' }},
     { '<leader>b', function () Snacks.picker.buffers() end},
-    { '<leader>H', '<cmd>Telescope help_tags<cr>' },
-    { '<leader>r', '<cmd>Telescope resume<cr>' },
+    { '<leader>H', function () Snacks.picker.help() end},
+    { '<leader>r', function () Snacks.picker.resume() end},
   }
 }
