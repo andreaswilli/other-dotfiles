@@ -24,6 +24,16 @@ snippet ,ta "table" A
 )
 endsnippet
 
+snippet ",t(\d+)" "table with n cols" rA
+#table(
+	columns: `!p snip.rv = match.group(1)`,
+	table.header(`!p snip.rv = ', '.join(['[**]' for i in range(int(match.group(1)))])`),
+	`!p snip.rv = ', '.join(['[]' for i in range(int(match.group(1)))])`,
+	`!p snip.rv = ', '.join(['$$' for i in range(int(match.group(1)))])`,
+	`!p snip.rv = ', '.join(['\`\`' for i in range(int(match.group(1)))])`,
+)
+endsnippet
+
 snippet ,th "table header" Ai
 table.header($1),
 endsnippet
