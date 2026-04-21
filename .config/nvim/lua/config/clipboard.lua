@@ -1,17 +1,16 @@
 if vim.fn.has("wsl") == 1 then
 
-  local clip = "/mnt/c/Windows/System32/clip.exe"
-  local powershell = "/mnt/c/eplatform/mytools/PowerShell-7.3.1-win-x64/pwsh.exe"
+  local win32yank = "/mnt/c/eplatform/bin/win32yank.exe"
 
   vim.g.clipboard = {
     name = "WslClipboard",
     copy = {
-      ["+"] = clip,
-      ["*"] = clip
+      ["+"] = win32yank .. " -i --crlf",
+      ["*"] = win32yank .. " -i --crlf"
     },
     paste = {
-      ["+"] = powershell .. ' -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-      ["*"] = powershell .. ' -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))'
+      ["+"] = win32yank .. " -o --lf",
+      ["*"] = win32yank .. " -o --lf"
     },
     cache_enabled = 0
   }
