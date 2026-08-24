@@ -14,6 +14,10 @@ return {
     -- input = { enabled = true },
     picker = {
       enabled = true,
+      sources = {
+        files = { hidden = true },
+        grep  = { hidden = true },
+      },
       win = {
         input = {
           keys = {
